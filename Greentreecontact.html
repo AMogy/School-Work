@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <div class="container">
+            <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>Green Tree Cafe</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+             integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+             crossorigin="anonymous">
+        <link href="open-iconic/font/css/open-iconic-bootstrap.css" rel="stylesheet">
+        <link rel="stylesheet"
+              type="text/css"
+              href="Greentreestyle.css"/>
+              <style>
+                  body {
+                    background-color: rgb(195, 231, 195);
+                  }
+                  input[type=text] {
+                      border: 2px solid black;
+                      width: 50%;
+                      padding:6px 6px;
+                      margin: 12px 0;
+                      box-sizing: border-box;
+                  }
+                  fieldset {
+                      background-color: #ebf5eb;
+                      width: 50%;
+                      padding: 12px 20px;
+                      margin: 12px 0;
+                      box-sizing:	border-box;
+                  }
+                  select, textarea {
+                      margin: 12px 0;
+                      font-size:1em;
+                  }
+                  textarea {
+                      width: 50%;
+                      height: 200px;
+                      padding: 12px 20px;
+                      margin: 12px 0;
+                      box-sizing: border-box;
+                      border: 2px solid black;
+                      border-radius: 3px;
+                      background-color: #ebf5eb;
+                      resize: none;
+                  }
+                  div.goRight {
+                      clear:left;
+                      text-align:right;
+                      padding:15px;
+                      padding-right:10px;
+                  }
+              </style>
+        </div>
+    </head>
+    <body>
+        <div class="container">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <script>
+        function isFormValid(form) {
+            if (form.nameInput.value == "") {
+                alert("Error: Name: is empty!");
+                form.nameInput.focus();
+                return false;
+            }
+        
+            if (form.emailInput.value == ""){
+                alert("Error: Email is empty!");
+                form.emailInput.focus();
+                return false;
+            }
+            
+            if (form.phoneInput.value == ""){
+                alert("Error: Phone is empty!");
+                form.phoneInput.focus();
+                return false;
+            }
+            if(form.contact.selectedIndex > 0) {
+            } else {
+                // default option remains selected
+            }
+            if(form.info.value == ""){
+                alert("Error: Additional Information is empty!");
+                form.info.focus();
+                return false;
+            }
+            var radioEmpty = true;
+            for(var i=0; i < form.youBeen.length; i++) {
+                if(form.youBeen[i].checked) {
+                    radioEmpty = false;
+                    break;
+                }
+            }
+            if(radioEmpty) {
+                alert("Error: Have you been to the restaurant is empty!");
+                return false;
+            }
+            var dayEmpty = true;
+            for(var i=0; i< form.bestDay.length; i++){
+                if(form.bestDay[i].checked) {
+                    dayEmpty = false;
+                    break;
+                }
+            }
+            if(dayEmpty) {
+                alert("Best days to contact you is empty!");
+                return false;
+            }
+            alert("Thank you for your submission!");
+            return false; // to prevent form submission per exercise instructions
+        }
+    </script>
+    <header>
+        <h1>Green Tree Cafe</h1>
+        <hr />
+        </header>
+        <nav>
+            <div class="container">
+            <a class="btn badge-pill" href="Greentreehome.html"><span class="oi oi-home" title="Home" aria-hidden="true"></span></a>
+            <a class="btn badge-pill" href="Greentreemenu.html">Menu</a>
+            <a class="btn badge-pill" href="Greentreecontact.html">Contact</a>
+            </div>
+            <div class="clear-float"></div>
+        </nav>
+        <br />
+        <form name="userInfo" onsubmit="return isFormValid(userInfo);">
+            <div class="container">
+                <div class="row">
+                    <div class="col-1 col-4 goRight">
+                       <label for="yourName">Name:</label></div>
+                    <div class="col-5 col-8">
+                       <input type="text" name="nameInput" />
+                    </div>
+                    <div class="col-9 col-12">
+
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-1 col-4 goRight">
+                      <label for="yourEmail">Email:</label>
+                    </div>
+                    <div class="col-5 col-8">
+                      <input type="text" name="emailInput" />
+                    </div>
+                    <div>
+
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-1 col-4 goRight">
+                <label for="yourPhone">Phone:</label>
+                    </div>
+                <div class="col-5 col-8">
+                <input type="text" name="phoneInput" />
+                </div>
+                <div class="col-9 col-12">
+
+                </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-1 col-4 goRight">
+                <label for="contact">Reason for Inquiry:</label>
+                </div>
+                <div class="col-5 col-8">
+                <select id="contact" name="contact">
+                    <option value="catering" selected>Catering</option>
+                    <option value="party">Private party</option>
+                    <option value="feedback">Feedback</option>
+                    <option value="other">Other</option>
+                </select>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-1 col-4 goRight">
+                <label for="info">Additional Information:</label>
+                </div>
+                <div class="col-5 col-8">
+                <textarea id="info" name="info"></textarea>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-1 col-4 goRight">
+                    <label for="yesNo">Have you been to the restaurant?</label>
+                </div>
+                <div class="col-5 col-8">
+                <fieldset>
+                    <input type="radio" id="choice1" name="youBeen" value="yes">
+                    <label for="choice1">Yes</label>
+                    <input type="radio" id="choice2" name="youBeen" value="no">
+                    <label for="choice2">No</label>
+                </fieldset>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-1 col-4 goRight">
+                    <label for="dayContact">Best days to contact you?</label>
+                </div>
+                <div class="col-5 col-8">
+                <fieldset>
+                    <input type="checkbox" id="monday" name="bestDay" value="monday">
+                    <label for="monday">M</label>
+                    <input type="checkbox" id="tuesday" name="bestDay" value="tuesday">
+                    <label for="tuesday">T</label>
+                    <input type="checkbox" id="wednesday" name="bestDay" value="wednesday">
+                    <label for="wednesday">W</label>
+                    <input type="checkbox" id="thursday" name="bestDay" value="thursday">
+                    <label for="thursday">T</label>
+                    <input type="checkbox" id="friday" name="bestDay" value="friday">
+                    <label for="friday">F</label>
+                    <input type="checkbox" id="saturday" name="bestDay" value="saturday">
+                    <label for="saturday">S</label>
+                    <input type="checkbox" id="sunday" name="bestDay" value="sunday">
+                    <label for="sunday">S</label>
+                </fieldset>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-1 col-5">
+
+                </div>
+                <div class="col 6">
+                    <input type="submit" name="submit" value="submit" style=width:150px;>
+                </div>
+            </div>
+            </div>
+        </form>
+        <br>
+        <footer>
+            <p>123 Green Cactus Street, Sunny Side, MN 12345</p>
+            <p>123-123-1234</p>
+        </footer>
+        </div>
+        <noscript>
+            <style type="text/css">
+            .pagecontainer {display:none;}
+            </style>
+            <div class="noscriptmsg">
+                You don't have JavaScript enabled.
+            </div>
+        </noscript>
+        </body>
+
+</html>

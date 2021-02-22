@@ -1,0 +1,42 @@
+body {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+header, footer {
+background-color: darkolivegreen;
+color:gainsboro;
+text-align: center;
+}
+h1 {
+    font-family: 'Bebas Neue', cursive;
+}
+nav {
+    border-top: 4px dashed rgb(13, 43, 26);
+    border-bottom: 4px dashed rgb(13, 43, 26);
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+nav a {
+    background-color: rgb(24, 43, 8);
+    font-family:fantasy;
+    color: rgb(119, 185, 104);
+    padding: 8px;
+    text-decoration: none;
+    display: block;
+    margin: 20px 20px;
+    width: 100px;
+    float: left;
+  
+}
+a:visited {
+    color:rgb(199, 142, 58);
+}
+a:hover {
+    font-weight:bold;
+}
+a:active {
+    text-decoration: none;
+}
+.clear-float {
+    clear:both;
+}
